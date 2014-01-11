@@ -1,6 +1,6 @@
 # jQuery.mediaReady.js
 
-jQuery plugin for running code dependent on media features (e.g. the current screen-width or touch capability) - like custom media queries for JavaScript
+jQuery plugin for running code dependent on media features (e.g. the current screen-width or touch capability) - think custom media queries for JavaScript
 
 ## Getting Started
 
@@ -10,7 +10,6 @@ Download the [production version][min] or the [development version][max].
 [max]: https://raw.github.com/pixlscript/jquery-mediaready/master/dist/jquery.mediaready.js
 
 In your web page:
-
 ```html
 <script src="jquery.js"></script>
 <script src="dist/mediaready.min.js"></script>
@@ -28,9 +27,10 @@ jQuery(function($) {
 ## Documentation
 After running `jQuery.mediaReady.init()` you have access to the following methods:
 
-### `jQuery.mediaReady.ready(requiredMedias, callback);`
+#### `jQuery.mediaReady.ready(requiredMedias, callback);`
 
 > **requiredMedias**:     string or array of media names
+
 > **callback**:           function
 
 Instantly check for one or more media types:
@@ -40,9 +40,10 @@ jQuery.mediaReady.ready(['xs', 'sm'], function() {
 });
 ```
 
-### `jQuery.mediaReady.besides(forbiddenMedias, callback);`
+#### `jQuery.mediaReady.besides(forbiddenMedias, callback);`
 
 > **forbiddenMedias**:    string or array of media names
+
 > **callback**:           function
 
 Instantly check for one or more media types, that should **not match**:
@@ -52,10 +53,12 @@ jQuery.mediaReady.besides(['xs', 'sm'], function() {
 });
 ```
 
-### `jQuery.mediaReady.on(requiredMedias, callback, [initialize]);`
+#### `jQuery.mediaReady.on(requiredMedias, callback, [initialize]);`
 
 > **requiredMedias**:     string or array of media names
+
 > **callback**:           function
+
 > **initialize**:         initially check requiredMedias (default: true)
 
 Check for one or more media types - check again on resize and fire callback everytime the given medias match:
@@ -69,10 +72,12 @@ jQuery.mediaReady.on(['xs', 'sm'], function() {
 });
 ```
 
-### `jQuery.mediaReady.once(requiredMedias, callback, [initialize]);`
+#### `jQuery.mediaReady.once(requiredMedias, callback, [initialize]);`
 
 > **requiredMedias**:     string or array of media names
+
 > **callback**:           function
+
 > **initialize**:         initially check requiredMedias (default: true)
 
 Check for one or more media types - check again on resize and fire callback **once** when the given medias match:
@@ -85,9 +90,10 @@ jQuery.mediaReady.once(['xs', 'sm'], function() {
 });
 ```
 
-### `jQuery.mediaReady.off(requiredMedias, [callback]);`
+#### `jQuery.mediaReady.off(requiredMedias, [callback]);`
 
 > **requiredMedias**:     string or array of media names
+
 > **callback**:           function
 
 Remove any listeners for the requiredMedias (if set, only the one with the given callback):
